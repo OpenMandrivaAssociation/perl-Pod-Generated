@@ -1,15 +1,13 @@
 %define upstream_name    Pod-Generated
-%define upstream_version 0.05
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.05
+Release:	7
 
 Summary:	Template plugin to help generate POD
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/hanekomu/pod-generated
-Source0:	https://cpan.metacpan.org/authors/id/M/MA/MARCEL/Pod-Generated-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/M/MA/MARCEL/Pod-Generated-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -40,7 +38,7 @@ Class::Accessor::Constructor manpage and the Class::Accessor::FactoryTyped
 manpage do support generated documentation, or will do so shortly.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 # outdated and broken, use system perl-YAML instead
 rm -f inc/YAML.pm
 
